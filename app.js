@@ -21,7 +21,7 @@ const fetchData = ()=>{
                       `
                       <div class='statsBoard'>
 
-                          <div class='backgroundStats' style='background-color:${item.backgroundColor}; background-image:url('/images/icon-${ item.title.toLowerCase() === 'self care' ? 'self-care' : item.title.toLowerCase()}.svg');>
+                          <div class='backgroundStats' style='background-color:${item.backgroundColor}; background-image:url('./icon-${ item.title.toLowerCase() === 'self care' ? 'self-care' : item.title.toLowerCase()}.svg');>
 
                           </div>
                           <div class='containerStats'>
