@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(226, 43%, 10%);
+    display:grid;
+    place-content:center;
+    height:100vh;
+    font-family: 'Rubik', sans-serif;
+    color:white;
+    font-weight:500;
+}
+
+.cardFrame{
+    width:70vw;
+    height:70vh;
+    display:flex;
+}
+
+@media only screen and (max-width: 700px) {
+    .cardFrame {
+      flex-direction: column;
+    }
+  }
+
+  .Profile{
+    height:100%;
+    min-height:400px;
+    width:250px;
+    border-radius:30px;
+    background: hsl(235, 46%, 20%);
+}
+
+.profileInfo{
+    background: hsl(246, 80%, 60%);
+    height:70%;
+    width:250px;
+    border-radius: 30px;
+    padding:2rem;
+}
+
+.circleFrame{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2px white solid;
+    position:relative;
+    margin-bottom:2.5rem;
+}
+
+.circleFrame img{
+    width:60px;
+    object-fit: contain;
+    position:absolute;
+    left:50%; top:50%;
+    transform: translate(-50%, -50%);
+}
+
+.profileText h1, .profileText p{
+    font-weight:300;
+    letter-spacing: 2px;
+    margin-bottom:0.5rem;
+}
+
+.timeOptions{
+    display:flex;
+    flex-direction:column;
+    padding: 2rem;
+}
+
+.timeOptions p{
+    margin-bottom:0.5rem;
+    color: hsl(236, 100%, 87%);
+}
+
+.timeOptions p:hover{
+    cursor:pointer;
+    color: hsl(235, 45%, 61%);
+}
+
+@media only screen and (max-width: 700px) {
+    .Profile{
+      width:100%;
+      margin-bottom:2rem;
+    }
+
+    .profileInfo{
+        width:100%;
+    }
+
+    .timeOptions{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}
+
+  .statsCard{
+      height:100%; width:100%;
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(225px,1fr));
+      margin: 0 0 0 1rem;
+  }
+
+  .statsBoard{
+      border-radius:15px;
+      overflow:hidden;
+      height:200px;
+      position: relative;
+      margin:0 1rem 2rem 0;
+      background: transparent;
+  }
+
+  .backgroundStats{
+      height:30%;
+      background-repeat: no-repeat;
+      background-position: right;
+      background-image: url('./images/icon-play.svg');
+  }
+
+  .containerStats{
+    padding:1.5rem;
+    border-radius: 15px;
+    background: hsl(235, 46%, 20%);;
+    z-index:99;
+    position:absolute;
+    left:0; bottom:0;
+    height:80%;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+  }
+
+  .containerStats:hover{
+    cursor: pointer;
+    background: hsl(235, 45%, 61%);
+    }
+
+    .containerStats h1{
+        font-size:3.5rem;
+        font-weight:300;
+        margin-top:0.25em;
+    }
+
+    .containerStats h5{
+        color: hsl(236, 100%, 87%);
+        font-weight: 300;
+    }
+
+    .active{
+        color:green;
+    }
+
